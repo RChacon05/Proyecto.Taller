@@ -5,9 +5,6 @@ def insertar (nombre:str)->None:
 
   Args:
       nombre (str): _description_
-      apellido1 (str): _description_
-      apellido2 (str): _description_
-      telefonos (list): _description_
   """
   lista_personas.append((nombre))
 
