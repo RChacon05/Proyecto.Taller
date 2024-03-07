@@ -3,8 +3,10 @@ import agenda
 from os import system
 
 
+
 black   = "\033[0;30m"
 red     = "\033[0;31m"
+blue    = '\033[94m'
 green   = "\033[0;32m"
 yellow  = "\033[0;33m"
 white   = "\033[0;37m"
@@ -13,12 +15,12 @@ nocolor = "\033[0m"
 def menu():
   while True:    
     print (chr(27) + "[2J")
-    print (green)
+    print (blue)
     print ("!!Patron de Frutas!!")
     print (yellow)
     print ("\n")
-    print ("Iniciar")
-    print ("\n",white)
+    print ("1) Iniciar")
+    print ("\n",green)
     opt=int(input ("Digite 1 para iniciar el juego: "))
     if opt==1:
       registrar_jugador()        
@@ -29,16 +31,18 @@ def menu():
 
 def registrar_jugador():
   print (chr(27) + "[2J")
+  print (green)
   nombre=input ("ingrese un Jugador: ")
   system("cls")
   agenda.insertar(nombre)
+  print(blue)
   print("Jugadores:", agenda.lista_personas)
   t.sleep(0.5)
   print (yellow)
   print ("\n")
   print ("1) Agregar otro Jugador")
   print ("2) Jugar")
-  print ("\n",white)
+  print ("\n",blue)
   opt=int(input ("Digite alguna de las opciones anteriores: "))
   if opt==1:
       registrar_jugador()        
