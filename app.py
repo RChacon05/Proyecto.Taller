@@ -3,6 +3,8 @@ import time
 import agenda as ag
 lista_juego=[[0,1,2,3,4],[4,3,2,1,0],[4,3,2,1,0],[0,2,1,4,3],[3,4,2,0,1]]
 
+test=0
+
 print('\033[2J')  # Código ANSI para limpiar la pantalla en sistemas Windows
 tiempo_total=0
 cont=0
