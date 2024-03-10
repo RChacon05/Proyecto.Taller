@@ -44,7 +44,7 @@ def iniciar_juego():
     u.insertar(nombre)
     iniciar_juego()        
   elif opt==2:
-    import app
+    import rondas
   elif opt==3:
     reglas()
   else:
@@ -65,6 +65,4 @@ def reglas():
   else:
     pass
 
-
-    
 menu()
