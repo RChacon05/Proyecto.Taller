@@ -1,5 +1,5 @@
+jugadores_tiempo={}
 lista_personas=[]
-
 def insertar (nombre:str)->None:
   """_summary_
 
@@ -8,3 +8,4 @@ def insertar (nombre:str)->None:
   """
   lista_personas.append((nombre))
 
+  
