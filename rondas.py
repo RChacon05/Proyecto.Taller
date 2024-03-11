@@ -3,7 +3,7 @@ import time as t
 import colores as co
 import utilidades as u
 
-lista_nivel1=[[0],[0],[0],[0],[0]]
+lista_nivel1=[[0,1],[0],[0],[0],[0]]
 lista_nivel2=[[0],[0],[0],[0],[0]]
 lista_nivel3=[[0],[0],[0],[0],[0]]
 
@@ -29,7 +29,7 @@ for x in lista_nivel1:
         print(f'Ordene los marcadores en el orden que se le indicó!')
         t.sleep(1.5)
         print('\033[2J')  
-        tiempo_turno=round(ar.start_sorting(x,flip_image=False,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
+        tiempo_turno=round(ar.start_sorting(x,flip_image=True,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
         tiempo_nivel1+=tiempo_turno
         print(f'Tiempo de partida: {tiempo_turno}s')
         t.sleep(3)
