@@ -65,7 +65,7 @@ def start_sorting(sorted_list, flip_image:bool=False, show_identified_marker:boo
 
         # Invert the image horizontally and vertically.
         if flip_image:
-            frame = cv2.flip(frame, -1)
+            frame = cv2.flip(frame, 1)
 
         # Detect ARUCO markers in the camera image.
         corners, ids, _ = detector.detectMarkers(frame)

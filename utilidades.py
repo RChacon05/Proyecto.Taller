@@ -1,8 +1,8 @@
 nombre_frutas=["piña","cereza","uva","pera","guanabana"]
 jugadores_turno={}
-jugadores_ronda1={}
-jugadores_ronda2={}
-jugadores_ronda3={}
+jugadores_nivel1={}
+jugadores_nivel2={}
+jugadores_nivel3={}
 lista_personas=[]
 
 def imprimir_frutas(lista:list):
