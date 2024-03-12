@@ -5,7 +5,7 @@ jugadores_nivel2={}
 jugadores_nivel3={}
 lista_personas=[]
 
-def imprimir_frutas(lista:list):
+def imprimir_frutas(lista):
     orden_frutas=""
     for e in lista:
                 orden_frutas+=nombre_frutas[e]+" "
