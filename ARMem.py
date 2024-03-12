@@ -112,7 +112,7 @@ def start_sorting(sorted_list, flip_image:bool=False, show_identified_marker:boo
                     cv2.putText(frame, f'X:{cX},Y:{cY}', (cX, cY+20), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 0, 255), 1,cv2.LINE_AA)
         
         # Show final image in the visor
-        cv2.imshow(f'ARMem',frame)
+        cv2.imshow(f'ARMem', frame)
 
         # Exit the loop when the markers are ordered.
         if cv2.waitKey(1) & (sorted_list==sorted_markers):
@@ -123,4 +123,4 @@ def start_sorting(sorted_list, flip_image:bool=False, show_identified_marker:boo
             return final_time-init_time
 
 if __name__=="__main__":
-    print(start_sorting([1,3],flip_image=True,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False))
+    print(start_sorting([1,3],show_images=True,flip_image=True ,show_coordinates=False, show_ids=False, show_identified_marker=False))
