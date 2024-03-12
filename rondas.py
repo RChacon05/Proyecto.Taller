@@ -13,9 +13,9 @@ def reset(f):
      f.resultadoFinal.clear
 
 def juego():
-    lista_nivel=[PR.organizar([r.randint(0,4)for i in range(2)])]#,PR.organizar([r.randint(0,4)for i in range(3)])]#,PR.organizar([r.randint(0,4)for i in range(3)]),PR.organizar([r.randint(0,4)for i in range(3)]),PR.organizar([r.randint(0,4)for i in range(3)])]
-    lista_nivel2=[PR.organiza2([r.randint(0,4)for i in range(2)])]#,PR.organizar([r.randint(0,4)for i in range(4)])]#,PR.organizar([r.randint(0,4)for i in range(4)]),PR.organizar([r.randint(0,4)for i in range(4)]),PR.organizar([r.randint(0,4)for i in range(4)])]
-    lista_nivel3=[PR.organizar([r.randint(0,4)for i in range(2)])]#,PR.organizar([r.randint(0,4)for i in range(5)])]#,PR.organizar([r.randint(0,4)for i in range(5)]),PR.organizar([r.randint(0,4)for i in range(5)]),PR.organizar([r.randint(0,4)for i in range(5)])]
+    lista_nivel1=[PR.organizar([r.randint(0,4)for i in range(2)]),PR.organizar([r.randint(0,4)for i in range(3)]),PR.organizar([r.randint(0,4)for i in range(3)]),PR.organizar([r.randint(0,4)for i in range(3)]),PR.organizar([r.randint(0,4)for i in range(3)])]
+    lista_nivel2=[PR.organizar([r.randint(0,4)for i in range(2)]),PR.organizar([r.randint(0,4)for i in range(4)]),PR.organizar([r.randint(0,4)for i in range(4)]),PR.organizar([r.randint(0,4)for i in range(4)]),PR.organizar([r.randint(0,4)for i in range(4)])]
+    lista_nivel3=[PR.organizar([r.randint(0,4)for i in range(2)]),PR.organizar([r.randint(0,4)for i in range(5)]),PR.organizar([r.randint(0,4)for i in range(5)]),PR.organizar([r.randint(0,4)for i in range(5)]),PR.organizar([r.randint(0,4)for i in range(5)])]
     tiempo_nivel1=0
     tiempo_nivel2=0
     tiempo_nivel3=0
@@ -24,25 +24,27 @@ def juego():
     print("NIVEL 1")
     t.sleep(2)
 
-    for x in lista_nivel:
+    for x in lista_nivel1:
             cont=0
             while cont< len(u.lista_personas):
+                r.shuffle(x)
                 print('\033[2J')
                 print(f"turno de:", u.lista_personas[cont])
-                t.sleep(1)
+                t.sleep(3.5)
                 print(f'Memorice la siguiente secuencia...')
                 print(co.green)
                 u.imprimir_frutas(x)
+                x.reverse()
                 print(co.blue)
-                t.sleep(1)
+                t.sleep(5)
                 print('\033[2J')
                 print(f'Ordene los marcadores en el orden que se le indicó!')
-                t.sleep(1)
+                t.sleep(2.5)
                 print('\033[2J')  
-                tiempo_turno=round(ar.start_sorting(x,flip_image=True,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
+                tiempo_turno=round(ar.start_sorting(x,flip_image=False,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
                 tiempo_nivel1+=tiempo_turno
                 print(f'Tiempo de partida: {tiempo_turno}s')
-                t.sleep(1)
+                t.sleep(3)
                 print('\033[2J')  
                 u.jugadores_turno[u.lista_personas[cont]]= tiempo_turno
                 if not(u.lista_personas[cont] in u.jugadores_nivel1):
@@ -96,19 +98,21 @@ def juego():
     for x in lista_nivel2:
             cont=0
             while cont< len(u.lista_personas):
+                r.shuffle(x)
                 print('\033[2J')
                 print(f"turno de:", u.lista_personas[cont])
                 t.sleep(3.5)
                 print(f'Memorice la siguiente secuencia...')
                 print(co.green)
                 u.imprimir_frutas(x)
+                x.reverse()
                 print(co.blue)
                 t.sleep(5)
                 print('\033[2J')
                 print(f'Ordene los marcadores en el orden que se le indicó!')
                 t.sleep(2.5)
                 print('\033[2J')  
-                tiempo_turno=round(ar.start_sorting(x,flip_image=True,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
+                tiempo_turno=round(ar.start_sorting(x,flip_image=False,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
                 tiempo_nivel2+=tiempo_turno
                 print(f'Tiempo de partida: {tiempo_turno}s')
                 t.sleep(3)
@@ -165,19 +169,21 @@ def juego():
     for x in lista_nivel3:
         cont=0
         while cont< len(u.lista_personas):
+            r.shuffle(x)
             print('\033[2J')
             print(f"turno de:", u.lista_personas[cont])
-            t.sleep(1.5)
+            t.sleep(3.5)
             print(f'Memorice la siguiente secuencia...')
             print(co.green)
             u.imprimir_frutas(x)
+            x.reverse()
             print(co.blue)
-            t.sleep(1)
+            t.sleep(5)
             print('\033[2J')
             print(f'Ordene los marcadores en el orden que se le indicó!')
-            t.sleep(1.5)
+            t.sleep(2.5)
             print('\033[2J')  
-            tiempo_turno=round(ar.start_sorting(x,flip_image=True,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
+            tiempo_turno=round(ar.start_sorting(x,flip_image=False,show_images=True, show_coordinates=False, show_ids=False, show_identified_marker=False)  ,2)
             tiempo_nivel3+=tiempo_turno
             print(f'Tiempo de partida: {tiempo_turno}s')
             t.sleep(3)
@@ -206,6 +212,7 @@ def juego():
     print(co.green)
     print(f"{persona_min} es el ganador de el Nivel 3, con un tiempo de ({min_valor}).")
     t.sleep(5)
+    print ('\033[2J')
     print("Mostrando puntuaciones en breve...")
     t.sleep(3)
     print("resultado final en 3...")
@@ -263,8 +270,10 @@ def juego():
     print("2) volver a jugar")
     opt=int(input("Digite alguna de las opciones anteriores para continuar: "))
     if opt==1:
-         reset(juego())
-         import menujuego
+         print ('\033[2J')
+         print("¡Gracias por jugar! ;)")
+         t.sleep(5)
+         exit()
     elif opt==2:
          reset(juego())
          juego()
