@@ -1,6 +1,6 @@
 import time as t
 import utilidades as u
-import colores as co
+import colores as co 
 
 def menu():
     while True:
@@ -55,14 +55,14 @@ def reglas():
     print (chr(27) + "[2J")
     print (co.yellow)
     print ("Reglas:")
-    print ( "El juego consiste en memorizar un patron de frutas y posteriormente ""\n"
-            "ordenar dicho patron mostrandolo a la panta del dispositivo.""\n"
+    print ( "El juego consiste en memorizar un patrón de frutas y posteriormente ""\n"
+            "ordenar dicho patrón mostrándolo a la pantalla del dispositivo.""\n"
             "  Puede ser jugado por un solo jugador o por una cantidad no definida""\n"
             "de jugadores. El juego será una competencia entre los jugadores por ""\n"
-            "ver quien consigue el minimo de tiempo a la hora de ordenar el patrón,""\n"
+            "ver quien consigue el mínimo de tiempo a la hora de ordenar el patrón,""\n"
             "o bien, si juegas solo puedes tratar de vencer tu propio record.""\n"
             "  El juego consta con 3 niveles de dificultad, cada uno con 5 turnos en""\n"
-            "los que los jugadores deberán ordenar un patron distinto cada turno. ""\n"
+            "los que los jugadores deberán ordenar un patrón distinto cada turno. ""\n"
             "En cada nivel se aumentará la dificultad añadiendo una mayor cantidad""\n"
             "de frutas al patrón que hay que memorizar.""\n"
             "\n"
