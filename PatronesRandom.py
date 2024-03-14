@@ -1,6 +1,15 @@
 import random as r
 
 def organizar(l:list):
+    """Esta función se encarga de organizar una lista aleatoria para que no hayan números
+    repetidos, manteniendo la misma cantidad de números originales.
+
+    Args:
+        l (list): lista generada aleatoriamente la cual será modificada.
+
+    Returns:
+        list: retorna la lista modificada sin números repetidos.
+    """
     while True:
         lFinal:list=[]
         while True:
