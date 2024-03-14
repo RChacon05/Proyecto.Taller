@@ -1,9 +1,14 @@
 import time as t
 import utilidades as u
-import colores as co 
+import colores as co
+import rondas as ro 
 
 def menu():
+    """Menú inicial del juego, en este se verá una pequeña interfaz con el titulo del juego
+       y la opción "1) Iniciar" para dar comienzo al juego o la opción "2) Salir" para salir del juego.
+    """
     while True:
+        u.lista_personas.clear
         print ('\033[2J')   
         print (chr(27) + "[2J")
         print (co.blue)
@@ -11,8 +16,9 @@ def menu():
         print (co.yellow)
         print ("\n")
         print ("1) Iniciar")
+        print ("2) Salir")
         print ("\n",co.green)
-        opt=int(input ("Digite 1 para iniciar el juego: "))
+        opt=int(input ("Digite 1 para iniciar el juego o 2 para salir: "))
         if opt==1:
             print (chr(27) + "[2J")
             print (co.green)
@@ -20,12 +26,17 @@ def menu():
             print ('\033[2J')
             u.insertar(nombre)
             iniciar_juego()      
-        else:
-            pass
+        elif opt==2:
+            exit()
       
         print (chr(27) + "[2J")
 
 def iniciar_juego():
+    """Submenú del juego en el cual se agregará el primer jugador. En este menú se presentan
+       varias opciones, como la de agregar más jugadores a la partida, ir al apartado de reglas
+       en el cual se explica un poco como se juega y la opción de iniciar la partida.
+       Además, en la parte superior de este menú se mostrará los jugadores agregados.
+    """
     print (chr(27) + "[2J")
     print (co.blue)
     print ("Jugadores:", u.lista_personas)
@@ -44,7 +55,7 @@ def iniciar_juego():
         u.insertar(nombre)
         iniciar_juego()        
     elif opt==2:
-        import rondas
+        ro.juego()
     elif opt==3:
         reglas()
     else:
@@ -52,6 +63,9 @@ def iniciar_juego():
     
 
 def reglas():
+    """Apartado de reglas, creado con la funcionalidad de explicar en que consiste el juego
+       y como se juega. 
+    """
     print (chr(27) + "[2J")
     print (co.yellow)
     print ("Reglas:")
@@ -83,5 +97,3 @@ def reglas():
         iniciar_juego()
     else:
         pass
-
-menu()
