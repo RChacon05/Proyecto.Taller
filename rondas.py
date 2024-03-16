@@ -44,7 +44,7 @@ def juego():
                 u.imprimir_frutas(x)
                 x.reverse()
                 print(co.blue)
-                t.sleep(5)
+                t.sleep(4)
                 print('\033[2J')
                 print(f'Ordene los marcadores en el orden que se le indicó!')
                 t.sleep(1) 
@@ -52,7 +52,7 @@ def juego():
                 tiempo_nivel1+=tiempo_turno
                 print('\033[2J')
                 print(f'Tiempo de partida: {tiempo_turno}s')
-                t.sleep(3)
+                t.sleep(2)
                 print('\033[2J')  
                 u.jugadores_turno[u.lista_personas[cont]]= tiempo_turno
                 if not(u.lista_personas[cont] in u.jugadores_nivel1):
@@ -65,11 +65,11 @@ def juego():
                 for J,T in u.jugadores_turno.items():
                     print (f"El jugador {J} ha completado el turno en un tiempo de {T} s")
                     t.sleep(1)
-                t.sleep(3)
+                t.sleep(2)
                 print('\033[2J')
     print(co.green)
     rk.ranked(u.jugadores_nivel1)
-    t.sleep(5)   
+    t.sleep(4)   
     min_valor = float('inf')
     for persona, valor in u.jugadores_nivel1.items():
         if valor < min_valor:
@@ -78,7 +78,7 @@ def juego():
     tiempo_nivel1={persona_min,min_valor}
     print('\033[2J')
     print(f"{persona_min} es el ganador de el Nivel 1, con un tiempo de ({min_valor}).")
-    t.sleep(5)
+    t.sleep(4)
     print('\033[2J')
     print("comenzando el siguiente nivel...")
     t.sleep(4)
@@ -116,7 +116,7 @@ def juego():
                 u.imprimir_frutas(x)
                 x.reverse()
                 print(co.blue)
-                t.sleep(5)
+                t.sleep(4)
                 print('\033[2J')
                 print(f'Ordene los marcadores en el orden que se le indicó!')
                 t.sleep(1) 
@@ -124,7 +124,7 @@ def juego():
                 tiempo_nivel2+=tiempo_turno
                 print('\033[2J')
                 print(f'Tiempo de partida: {tiempo_turno}s')
-                t.sleep(3)
+                t.sleep(2)
                 print('\033[2J')  
                 u.jugadores_turno[u.lista_personas[cont]]= tiempo_turno
                 if not(u.lista_personas[cont] in u.jugadores_nivel2):
@@ -137,11 +137,11 @@ def juego():
                 for J,T in u.jugadores_turno.items():
                     print (f"El jugador {J} ha completado el turno en un tiempo de {T} s")
                     t.sleep(1)
-                t.sleep(3)
+                t.sleep(2)
                 print('\033[2J')
     print(co.green)
     rk.ranked(u.jugadores_nivel2)
-    t.sleep(5) 
+    t.sleep(4) 
     min_valor = float('inf')
     for persona, valor in u.jugadores_nivel2.items():
         if valor < min_valor:
@@ -150,7 +150,7 @@ def juego():
     tiempo_nivel2={persona_min,min_valor}
     print('\033[2J')
     print(f"{persona_min} es el ganador de el Nivel 2, con un tiempo de ({min_valor}).")
-    t.sleep(5)
+    t.sleep(4)
     print('\033[2J')
     print("comenzando el siguiente nivel...")
     t.sleep(4)
@@ -188,7 +188,7 @@ def juego():
             u.imprimir_frutas(x)
             x.reverse()
             print(co.blue)
-            t.sleep(5)
+            t.sleep(4)
             print('\033[2J')
             print(f'Ordene los marcadores en el orden que se le indicó!')
             t.sleep(1)  
@@ -196,7 +196,7 @@ def juego():
             tiempo_nivel3+=tiempo_turno
             print('\033[2J')
             print(f'Tiempo de partida: {tiempo_turno}s')
-            t.sleep(3)
+            t.sleep(2)
             print('\033[2J')  
             u.jugadores_turno[u.lista_personas[cont]]= tiempo_turno
             if not(u.lista_personas[cont] in u.jugadores_nivel3):
@@ -209,11 +209,11 @@ def juego():
             for J,T in u.jugadores_turno.items():
                 print (f"El jugador {J} ha completado el turno en un tiempo de {T} s")
                 t.sleep(1)
-            t.sleep(3)
+            t.sleep(2)
             print('\033[2J')
     print(co.green)
     rk.ranked(u.jugadores_nivel3)
-    t.sleep(5) 
+    t.sleep(4) 
     min_valor = float('inf')
     for persona, valor in u.jugadores_nivel3.items():
         if valor < min_valor:
@@ -222,10 +222,10 @@ def juego():
     tiempo_nivel3={persona_min,min_valor}
     print('\033[2J')
     print(f"{persona_min} es el ganador de el Nivel 3, con un tiempo de ({min_valor}).")
-    t.sleep(5)
+    t.sleep(4)
     print ('\033[2J')
     print("Mostrando puntuaciones en breve...")
-    t.sleep(3)
+    t.sleep(2)
     print("resultado final en 3.")
     t.sleep(0.5)
     print('\033[2J')
@@ -257,12 +257,12 @@ def juego():
             print("!!!  TOP 3 !!!")
             t.sleep(2)
             print(f"{ lista_FK[2]} con un tiempo de { lista_FI[2]}")
-            t.sleep(3)
+            t.sleep(2)
             print(co.green)
             print("!!!  TOP 2 !!!")
             t.sleep(2)
             print(f"{ lista_FK[1]} con un tiempo de { lista_FI[1]}")
-            t.sleep(3)
+            t.sleep(2)
             print(co.yellow)
             print("!!! 👑 TOP 1 👑!!!")
             t.sleep(2)
@@ -274,7 +274,7 @@ def juego():
             print("!!!  TOP 2 !!!")
             t.sleep(2)
             print(f"{ lista_FK[1]} con un tiempo de { lista_FI[1]}")
-            t.sleep(3)
+            t.sleep(2)
             print(co.yellow)
             print("!!! 👑 TOP 1 👑!!!")
             t.sleep(2)
@@ -286,7 +286,7 @@ def juego():
             print("!!! 👑 TOP 1 👑!!!")
             t.sleep(2)
             print(f"{ lista_FK[0]} con un tiempo de { lista_FI[0]}")
-    t.sleep(5)
+    t.sleep(4)
     print("\n")
     print(co.blue)
     print("1) Salir")
